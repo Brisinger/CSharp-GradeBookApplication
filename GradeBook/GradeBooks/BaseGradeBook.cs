@@ -112,13 +112,25 @@ namespace GradeBook.GradeBooks
             switch (letterGrade)
             {
                 case 'A':
-                    return 4;
+                    if (studentType == StudentType.Standard || !IsWeighted)
+                        return 4;
+                    else
+                        return 4 + 1;
                 case 'B':
-                    return 3;
+                    if (studentType == StudentType.Standard || !IsWeighted)
+                        return 3;
+                    else
+                        return 3 + 1;
                 case 'C':
-                    return 2;
+                    if(studentType == StudentType.Standard || !IsWeighted)
+                        return 2;
+                    else
+                        return 2 + 1;
                 case 'D':
-                    return 1;
+                    if (studentType == StudentType.Standard || !IsWeighted)
+                        return 1;
+                    else
+                        return 1 + 1;
                 case 'F':
                     return 0;
             }
