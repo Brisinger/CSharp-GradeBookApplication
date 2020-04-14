@@ -27,6 +27,8 @@ namespace GradeBook.GradeBooks
                         return 'A';
                     case var percentile when percentile >= 60d:
                         return 'B';
+                    case var percentile when percentile >= 40d:
+                        return 'C';
                     default:
                         return 'F';
                 }
