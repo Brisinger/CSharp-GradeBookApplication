@@ -42,13 +42,13 @@ namespace GradeBook.UserInterfaces
             var name = parts[1];
             if(string.Compare("standard", parts[2],StringComparison.CurrentCultureIgnoreCase) == 0)
             {
-                StandardGradeBook gradeBook = new StandardGradeBook(name);
+                StandardGradeBook gradeBook = new StandardGradeBook(name, bool.Parse(parts[3]));
                 Console.WriteLine("Created gradebook {0}.", name);
                 GradeBookUserInterface.CommandLoop(gradeBook);
             }
             else if(string.Compare("ranked", parts[2], StringComparison.CurrentCultureIgnoreCase) == 0)
             {
-                RankedGradeBook gradeBook = new RankedGradeBook(name);
+                RankedGradeBook gradeBook = new RankedGradeBook(name, bool.Parse(parts[3]));
                 Console.WriteLine("Created gradebook {0}.", name);
                 GradeBookUserInterface.CommandLoop(gradeBook);
             }
